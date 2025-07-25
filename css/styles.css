@@ -7,6 +7,7 @@
 :root{
     --index: calc(1vw + 1vh);
     --text:#fffeea;
+    --transition: transform .75s cubic-bezier(.075, .5, 0, 1);
 }
 
 @font-face {
@@ -63,6 +64,7 @@ bottom:calc(var(--index)* -4.5);
     background-position:center;
     will-change:transform;
     z-index:2;
+    transition: var(--transition);
 }
 
 .layers__base{
@@ -86,6 +88,7 @@ bottom:calc(var(--index)* -4.5);
     font-weight: 900;
     color: var(--text);
     text-shadow: 0 0   8px #faf6b2 ;
+    transition: var(--transition);
 }
 
 .layers__title{
