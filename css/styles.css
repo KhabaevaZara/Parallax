@@ -6,6 +6,7 @@
 
 :root{
     --index: calc(1vw + 1vh);
+    --text:#fffeea;
 }
 
 @font-face {
@@ -83,7 +84,7 @@ bottom:calc(var(--index)* -4.5);
     will-change: transform;
     text-transform: uppercase;
     font-weight: 900;
-    color: #fffeea;
+    color: var(--text);
     text-shadow: 0 0   8px #faf6b2 ;
 }
 
@@ -99,6 +100,38 @@ bottom:calc(var(--index)* -4.5);
 }
 
 .main-artical{
+    --main-article-transform : translate3d(0, calc(var(--scrollTop)/ -7.5), 0);
     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color:var(--text);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position:relative;
+    text-align: center;
 }
 
+.main-article__header{
+    text-transform: uppercase;
+    font-size: calc(var(--index)* 1.8);
+    letter-spacing: calc(var(--index) / 7.8);
+    transform: var(--main-article-transform); /*Паралакс эффект*/
+    will-change:transform;
+}
+
+.main-article__paragraph{
+    max-width: calc(var(--index)* 30);
+    font-size: calc(var(--index)* .9);
+    margin-top:calc(var(--index)/ 1.25);
+    transform: var(--main-article-transform); /*Паралакс эффект*/
+    will-change:transform;
+}
+
+.copy{
+    position: absolute;
+    bottom:calc(var(--index)*2.5);
+    opacity: .45;
+    font-size:calc(var(--index)*.75);
+    letter-spacing: calc(var(--index) / 35);
+}
